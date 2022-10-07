@@ -2,6 +2,9 @@ import Foundation
 import Helpers
 
 class Day01Calculations: DayCalculatable {
+  let day: Int = 1
+  let input: String = Day01.Input
+  
   func calculatePart1(inputString: String) throws -> Int {
     let input = inputString.asIntArray()
     

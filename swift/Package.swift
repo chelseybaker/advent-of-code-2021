@@ -6,29 +6,22 @@ import PackageDescription
 let package = Package(
     name: "AdventOfCode",
     products: [
-        .library(name: "AdventOfCode", targets: ["AdventOfCode"]),
-        .executable(name: "AdventOfCode2021", targets: ["AdventOfCode2021"])
+        .executable(name: "AdventOfCode", targets: ["AdventOfCode"])
     ],
     dependencies: [
     ],
     targets: [
         .target(
-            name: "AdventOfCode",
-            dependencies: []),
-        .target(
             name: "Helpers",
             dependencies: [],
             path: "Sources/Helpers"),
         .target(
-            name: "AdventOfCode2021",
+            name: "AdventOfCode",
             dependencies: ["Helpers"],
-            path: "Sources/AdventOfCode2021"),
+            path: "Sources/AdventOfCode"),
         .testTarget(
             name: "AdventOfCodeTests",
             dependencies: ["AdventOfCode"]),
-        .testTarget(
-            name: "AdventOfCode2021Tests",
-            dependencies: ["AdventOfCode2021"]),
         .testTarget(
             name: "HelpersTests",
             dependencies: ["Helpers"]),
