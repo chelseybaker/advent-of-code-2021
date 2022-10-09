@@ -5,7 +5,7 @@
 //
 
 import XCTest
-@testable import AdventOfCode2021
+@testable import AdventOfCode
 
 class Day01CalculationsTests: XCTestCase {
 
