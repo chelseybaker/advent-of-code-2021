@@ -1,7 +1,7 @@
 import Foundation
 import Helpers
 
-struct Day16: Input {
+struct Day16Input: Input {
   static let Practice = """
 """
   

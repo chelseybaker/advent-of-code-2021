@@ -1,7 +1,7 @@
 import Foundation
 import Helpers
 
-let days: [DayCalculatable] = [Day01Calculations(), Day02Calculations()]
+let days: [AoCPrintable] = [Day01(), Day02(), Day16()]
 
 for day in days {
   print(day.summary())

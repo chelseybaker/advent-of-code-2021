@@ -15,7 +15,7 @@ let package = Package(
             name: "Helpers",
             dependencies: [],
             path: "Sources/Helpers"),
-        .target(
+        .executableTarget(
             name: "AdventOfCode",
             dependencies: ["Helpers"],
             path: "Sources/AdventOfCode"),
