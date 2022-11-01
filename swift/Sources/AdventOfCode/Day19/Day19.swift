@@ -58,11 +58,11 @@ class Day19: AoCPrintable {
   func rotateUnknownScannerToKnownScanner(knownScanner: RotatedScanner, unknownScanner: UnknownScanner) -> RotatedScanner? {
     let knownScannerMagnitudes = knownScanner.vectorMagnitudes.map({ $0.magnitude })
     
-    let matchingMagnitudes = unknownScanner.vectorMagnitudes.filter({ knownScannerMagnitudes.contains($0.magnitude) })
+    let matchingMagnitudes = unknownScanner.vectorMagnitudes.filter({ knownScannerMagnitudes.contains($0.magnitude) }).flatMap({ [$0.beaconA, $0.beaconB] }).unique()
     
     guard matchingMagnitudes.count >= 12 else { return nil }
     
-    guard let firstMatchingMagnitude = matchingMagnitudes.first else {
+    guard let firstMatchingMagnitude = unknownScanner.vectorMagnitudes.filter({ knownScannerMagnitudes.contains($0.magnitude) }).first else {
       return nil
     }
     
@@ -77,8 +77,6 @@ class Day19: AoCPrintable {
     // If the reversed comparison of beacons works, save it here
     var reverseOffset: Offset?
     var reverseRotation: ((Coordinate) -> Coordinate)?
-    
-    var allOffsets: [Offset] = []
     
     for rotation in rotations {
       let rotatedBeaconA = rotation(unknownScannerBeacons.beaconA)

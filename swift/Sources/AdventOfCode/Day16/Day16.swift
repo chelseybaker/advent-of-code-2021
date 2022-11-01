@@ -236,10 +236,6 @@ extension String {
     return binaryString
   }
   
-  func convertBinaryToInt() throws -> Int {
-    return Int(self, radix: 2)!
-  }
-  
   /// Pops the amount from the string.
   mutating func pop(_ count: Int) throws -> String {
     if (count > self.count) {

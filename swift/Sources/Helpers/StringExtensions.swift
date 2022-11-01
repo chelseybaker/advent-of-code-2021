@@ -50,3 +50,9 @@ private extension String {
     index(startIndex, offsetBy: offset)
   }
 }
+
+extension String {
+  public func convertBinaryToInt() throws -> Int {
+    return Int(self, radix: 2)!
+  }
+}
