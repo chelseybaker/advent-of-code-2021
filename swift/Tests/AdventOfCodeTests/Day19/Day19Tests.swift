@@ -33,7 +33,7 @@ class Day19Tests: XCTestCase {
   }
   
   func test_part2_practice() {
-    let scanners = try! day.rotateScanners(inputString: Day19Input.Practice)
+    let scanners = day.rotateScanners(inputString: Day19Input.Practice)
     XCTAssertEqual(scanners[0].originalLocation, Coordinate(x: 0, y: 0, z: 0))
     
     let scanner1 = scanners.filter({ $0.name == "scanner 1" }).first!
