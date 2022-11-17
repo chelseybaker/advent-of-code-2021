@@ -1,8 +1,15 @@
 import Foundation
 import Helpers
 
-struct Day21Input: Input {
-  static let Practice = """
+struct Day22Input {
+  static let Practice1 = """
+on x=10..12,y=10..12,z=10..12
+on x=11..13,y=11..13,z=11..13
+off x=9..11,y=9..11,z=9..11
+on x=10..10,y=10..10,z=10..10
+"""
+  
+  static let Practice2 = """
 on x=-20..26,y=-36..17,z=-47..7
 on x=-20..33,y=-21..23,z=-26..28
 on x=-22..28,y=-29..23,z=-38..16
