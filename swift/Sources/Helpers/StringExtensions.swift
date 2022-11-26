@@ -56,3 +56,38 @@ extension String {
     return Int(self, radix: 2)!
   }
 }
+
+extension String {
+  var length: Int {
+    return count
+  }
+  
+  func substring(fromIndex: Int) -> String {
+    return self[min(fromIndex, length) ..< length]
+  }
+  
+  func substring(toIndex: Int) -> String {
+    return self[0 ..< max(0, toIndex)]
+  }
+  
+  subscript (r: Range<Int>) -> String {
+    let range = Range(uncheckedBounds: (lower: max(0, min(length, r.lowerBound)),
+                                        upper: min(length, max(0, r.upperBound))))
+    let start = index(startIndex, offsetBy: range.lowerBound)
+    let end = index(start, offsetBy: range.upperBound - range.lowerBound)
+    return String(self[start ..< end])
+  }
+  
+  public mutating func pop(fromFront: Bool = false) -> String? {
+    if self.count == 0 { return nil }
+    if fromFront {
+      let first = self.first != nil ? String(self.first!) : nil
+      self = self.substring(fromIndex: 1)
+      return first
+    } else {
+      let last = self.last != nil ? String(self.last!) : nil
+      self = self.substring(toIndex: (self.count - 1))
+      return last
+    }
+  }
+}
