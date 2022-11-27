@@ -1,10 +1,7 @@
 import Foundation
 import Helpers
 
-class Day19: AoCPrintable {
-  
-  let day: Int = 19
-  let input: String = Day19Input.Input
+class Day19 {
   
   func calculatePart1(inputString: String) throws -> Int {
     let scanners = rotateScanners(inputString: inputString)

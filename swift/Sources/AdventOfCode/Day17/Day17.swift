@@ -21,9 +21,7 @@ struct ValidYVelocity {
   let time: Range // Time range where it's in target area
 }
 
-class Day17: AoCPrintable {
-  let day = 17
-  let input = Day17Input.Input
+class Day17 {
   
   func calculatePart1(inputString: String) throws -> Int {
     let targetArea = try getTargetAreaFromInput(inputString)

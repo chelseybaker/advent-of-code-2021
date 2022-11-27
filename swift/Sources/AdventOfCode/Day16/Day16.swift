@@ -46,9 +46,7 @@ struct Operator11Packet: OperatorPacket {
   let subpackets: [Packet]
 }
 
-class Day16: AoCPrintable {
-  let day = 16
-  let input = Day16Input.Input
+class Day16 {
   
   func calculatePart1(inputString: String) throws -> Int {
     var binaryArray = try inputString.convertHexToBinary()

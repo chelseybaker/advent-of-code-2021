@@ -1,7 +1,7 @@
 import Foundation
 import Helpers
 
-struct Day19Input: Input {
+struct Day19Input {
   static let Practice = """
 --- scanner 0 ---
 404,-588,-901

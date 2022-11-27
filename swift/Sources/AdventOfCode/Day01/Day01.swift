@@ -1,9 +1,7 @@
 import Foundation
 import Helpers
 
-class Day01: AoCPrintable {
-  let day: Int = 1
-  let input: String = Day01Input.Input
+class Day01 {
   
   func calculatePart1(inputString: String) throws -> Int {
     let input = inputString.asIntArray()
